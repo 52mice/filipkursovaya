@@ -1,0 +1,34 @@
+{% extends 'filipapp/base.html' %}
+
+{% block content %}
+    <h2>Ведомость оценок</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th width="50">ID</th>
+                <th>Студент</th>
+                <th>Предмет</th>
+                <th>Преподаватель</th>
+                <th width="80" style="text-align: center;">Оценка</th>
+                <th>Дата</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grade in grades %}
+            <tr>
+                <td>{{ grade.id }}</td>
+                <td>{{ grade.student.user.full_name }}</td>
+                <td>{{ grade.subject.name }}</td>
+                <td>{{ grade.teacher.user.full_name }}</td>
+                <td style="text-align: center;"><strong>{{ grade.value }}</strong></td>
+                <td>{{ grade.date|date:"d.m.Y" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" style="text-align: center; color: #777;">Оценок пока нет. Добавьте их через панель управления.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
