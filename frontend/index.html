@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Электронный журнал</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Электронный журнал</h1>
+            <span class="badge">Frontend Client</span>
+        </header>
+        
+        <nav>
+            <button onclick="loadData('classes')">Классы</button>
+            <button onclick="loadData('students')">Студенты</button>
+            <button onclick="loadData('grades')">Оценки</button>
+            <button onclick="loadData('schedule')">Расписание</button>
+            <a href="http://127.0.0.1:8000/api/" target="_blank" class="api-link">REST API</a>
+        </nav>
+
+        <main id="content">
+            <p class="loading">Загрузка данных...</p>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
