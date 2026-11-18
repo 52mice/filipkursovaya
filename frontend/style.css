@@ -88,3 +88,75 @@ tr:nth-child(even) {
     text-align: center;
     color: #777;
 }
+
+.journal-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.journal-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+.journal-table th, .journal-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    min-width: 40px;
+}
+
+.journal-table th:first-child, 
+.journal-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #f4f4f4;
+    text-align: left;
+    font-weight: bold;
+    min-width: 150px;
+    z-index: 10;
+    border-right: 2px solid #999;
+}
+
+.journal-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #333;
+}
+
+.grade-cell {
+    font-weight: bold;
+    color: #fc0c0c; 
+    font-size: 15px;
+}
+
+.journal-table tbody tr:nth-child(even) td:first-child {
+    background-color: #e9e9e9;
+}
+.grade-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.grade-5 {
+    font-weight: bold;
+    color: #00fd37; 
+    font-size: 15px;
+ } 
+.grade-4 { 
+    font-weight: bold;
+    color: #73ff00; 
+    font-size: 15px;
+ } 
+.grade-3 { font-weight: bold;
+    color: #fa9702; 
+    font-size: 15px; } 
+.grade-2 { font-weight: bold;
+    color: #fc0c0c; 
+    font-size: 15px; } 
